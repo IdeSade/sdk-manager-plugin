@@ -67,7 +67,7 @@ class PackageResolver {
   }
 
   def resolveBuildTools() {
-    def buildToolsRevision = project.android.buildToolsRevision
+    def buildToolsRevision = project.buildToolsRevision
     log.debug "Build tools version: $buildToolsRevision"
 
     def buildToolsRevisionDir = new File(buildToolsDir, buildToolsRevision.toString())
@@ -99,7 +99,7 @@ class PackageResolver {
   }
 
   def resolveCompileVersion() {
-    String compileVersion = project.android.compileSdkVersion
+    String compileVersion = project.compileSdkVersion
     log.debug "Compile API version: $compileVersion"
 
     if (compileVersion.startsWith(GOOGLE_API_PREFIX)) {
