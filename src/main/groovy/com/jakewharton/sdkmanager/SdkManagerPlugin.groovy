@@ -39,10 +39,10 @@ class SdkManagerPlugin implements Plugin<Project> {
         return
       }
       
-      if (!hasAndroidPlugin(project)) {
-        log.debug 'No Android plugin detecting. Skipping package resolution.'
-        return
-      }
+//      if (!hasAndroidPlugin(project)) {
+//        log.debug 'No Android plugin detecting. Skipping package resolution.'
+//        return
+//      }
 
       time "Package resolve", {
         PackageResolver.resolve project, sdk
